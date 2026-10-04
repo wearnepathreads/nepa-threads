@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="NEPA THREADS — premium streetwear inspired by Nepal's soul.">
+<title>NEPA THREADS | Wear Your Identity</title>
+<style>
+:root{--ink:#171916;--cream:#f4f1e9;--muted:#77786f;--line:#d9d6ce;--olive:#48513d}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}.topbar{height:70px;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;background:#171916;color:#fff;position:sticky;top:0;z-index:5}
+.brand{display:flex;align-items:center;gap:12px;font-family:Georgia,serif;letter-spacing:3px;font-size:18px}.mountain{font-size:30px;line-height:1}.nav{display:flex;gap:30px;font-size:12px;letter-spacing:1px;text-transform:uppercase}.nav a:hover{color:#c6c8b9}.cart{border:1px solid #777;background:transparent;color:#fff;padding:9px 13px}
+.hero{min-height:570px;background:linear-gradient(90deg,rgba(14,18,17,.84),rgba(14,18,17,.08)),url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=85') center/cover;display:flex;align-items:center;padding:7vw;color:#fff}
+.hero-copy{max-width:540px}.eyebrow{font-size:11px;letter-spacing:4px;text-transform:uppercase}.hero h1{font:clamp(54px,8vw,100px)/.92 Georgia,serif;margin:22px 0}.hero p{letter-spacing:2px;font-size:12px;line-height:1.8;max-width:330px}.btn{display:inline-block;background:#f8f7f2;color:#171916;padding:15px 22px;border:0;font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-top:18px}.section{padding:70px 5vw}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:28px}.section h2{font:clamp(32px,4vw,52px)/1.05 Georgia,serif;margin:8px 0}.sub{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--muted)}
+.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.category{height:260px;position:relative;overflow:hidden;background:#aaa}.category img{width:100%;height:100%;object-fit:cover;transition:transform .4s}.category:hover img{transform:scale(1.04)}.category:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.7))}.category span{position:absolute;z-index:1;bottom:22px;left:20px;color:white;font:26px Georgia,serif}
+.featured{display:grid;grid-template-columns:1fr 2.7fr;gap:35px}.intro p{color:#555;line-height:1.8;font-size:14px;max-width:330px}.products{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.product{min-width:0}.product-image{aspect-ratio:3/4;background:#e5e2da;overflow:hidden}.product-image img{width:100%;height:100%;object-fit:cover;mix-blend-mode:multiply;transition:transform .3s}.product:hover img{transform:scale(1.04)}.product h3{font-size:13px;font-weight:500;margin:12px 0 6px}.price{font-size:12px;color:#555}.add{border:1px solid var(--ink);background:transparent;padding:9px 12px;font-size:10px;letter-spacing:1px;margin-top:10px}.add:hover{background:var(--ink);color:#fff}
+.story{background:#20231f;color:#f5f2e9;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}.story img{width:100%;max-height:390px;object-fit:cover}.story p{line-height:1.8;color:#d0d0c8;font-size:14px}.contact{display:grid;grid-template-columns:1fr 1fr;gap:30px}.contact p{color:#666;line-height:1.8}.contact a{text-decoration:underline}.footer{background:#171916;color:#eee;padding:28px 5vw;display:flex;justify-content:space-between;align-items:center;font-size:11px;letter-spacing:1px}.notice{font-size:11px;color:#777;margin-top:14px}
+@media(max-width:800px){.nav{gap:13px}.categories{grid-template-columns:repeat(2,1fr)}.category{height:210px}.featured{grid-template-columns:1fr}.products{grid-template-columns:repeat(2,1fr)}.story,.contact{grid-template-columns:1fr}.hero{min-height:500px}.section{padding:52px 5vw}}
+@media(max-width:480px){.topbar{padding:0 4vw;height:62px}.brand{font-size:13px;letter-spacing:2px;gap:6px}.mountain{font-size:23px}.nav{gap:10px;font-size:9px}.nav a:nth-child(3){display:none}.cart{padding:7px;font-size:10px}.hero{min-height:450px;padding:8vw}.hero h1{font-size:58px}.categories{gap:8px}.category{height:170px}.category span{font-size:20px;left:12px;bottom:14px}.section-head{display:block}.footer{gap:12px;flex-wrap:wrap}}
+</style>
+</head>
+<body>
+<header class="topbar">
+<a class="brand" href="#home"><span class="mountain">△</span><span>NEPA THREADS</span></a>
+<nav class="nav"><a href="#home">Home</a><a href="#shop">Shop</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+<button class="cart" onclick="showCart()">Bag (<span id="count">0</span>)</button>
+</header>
+<main>
+<section class="hero" id="home"><div class="hero-copy"><div class="eyebrow">NEPA THREADS</div><h1>Wear Your<br>Identity.</h1><p>PREMIUM STREETWEAR INSPIRED BY NEPAL'S SOUL.</p><a class="btn" href="#shop">Shop collection&nbsp; →</a></div></section>
+<section class="section" aria-label="Collections"><div class="section-head"><div><div class="sub">Explore the collection</div><h2>Made to move. Made to last.</h2></div></div>
+<div class="categories">
+<a class="category" href="#shop"><img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=700&q=80" alt="Hoodie"><span>Hoodies ↗</span></a>
+<a class="category" href="#shop"><img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=700&q=80" alt="Jacket"><span>Jackets ↗</span></a>
+<a class="category" href="#shop"><img src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=700&q=80" alt="Pants"><span>Baggy pants ↗</span></a>
+<a class="category" href="#shop"><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=80" alt="T-shirt"><span>T-shirts ↗</span></a>
+</div></section>
+<section class="section" id="shop"><div class="featured"><div class="intro"><div class="sub">Featured collection</div><h2>Timeless pieces<br><i>for modern souls.</i></h2><p>At NEPA THREADS, we create more than just clothes — we create pieces that carry your story, your roots and your journey.</p><div class="notice">Sample products and prices below are editable.</div></div><div class="products" id="products"></div></div></section>
+<section class="section story" id="about"><div><div class="sub" style="color:#c5c8bb">Our story</div><h2>More than<br>just clothing.</h2><p>Born from a simple idea — to create clothing that represents our roots, our mountains and our generation. NEPA THREADS brings Nepal-inspired design into everyday streetwear.</p><p>Our mission is to craft thoughtful, comfortable pieces that connect culture, nature and individuality.</p></div><img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=85" alt="Streetwear editorial"></section>
+<section class="section contact" id="contact"><div><div class="sub">Get in touch</div><h2>Let's talk.</h2><p>Questions about sizing, orders or a new drop? Message us and we'll help.</p><p>Instagram: <a href="https://instagram.com/wearnepathreads" target="_blank" rel="noopener">@wearnepathreads</a></p><p>Location: Nepal</p></div><div><h3>Order and enquiries</h3><p>Use the bag button to prepare your order on WhatsApp. Replace the sample number in the website code with your business WhatsApp number.</p><button class="add" onclick="showCart()">View bag / order</button></div></section>
+</main>
+<footer class="footer"><span>△ &nbsp; NEPA THREADS</span><span>Wear Your Identity.</span><span>© <span id="year"></span> NEPA THREADS</span></footer>
+<script>
+const products=[
+{name:"Classic Hoodie",price:2800,category:"Hoodie",img:"https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=700&q=80"},
+{name:"Old Money Jacket",price:3500,category:"Jacket",img:"https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=700&q=80"},
+{name:"Baggy Pants",price:2500,category:"Pants",img:"https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=700&q=80"},
+{name:"Mountain Tee",price:1800,category:"T-shirt",img:"https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=80"}];
+let bag=[];
+const fmt=n=>"Rs. "+n.toLocaleString("en-IN");
+document.getElementById("products").innerHTML=products.map((p,i)=>`<article class="product"><div class="product-image"><img src="${p.img}" alt="${p.name}"></div><h3>${p.name}</h3><div class="price">${fmt(p.price)}</div><button class="add" onclick="addToBag(${i})">Add to bag +</button></article>`).join("");
+function addToBag(i){bag.push(products[i]);document.getElementById("count").textContent=bag.length;alert(products[i].name+" added to your bag.");}
+function showCart(){if(!bag.length){alert("Your bag is empty. Add a product first.");return;}let lines=bag.map(p=>p.name+" — "+fmt(p.price));let total=bag.reduce((s,p)=>s+p.price,0);let msg="Namaste NEPA THREADS! I'd like to order:\\n"+lines.join("\\n")+"\\nTotal: "+fmt(total)+"\\nPlease confirm sizes and availability.";let phone="9779747507900";if(phone.includes("X")){alert("Your bag:\\n"+lines.join("\\n")+"\\nTotal: "+fmt(total)+"\\n\\nTo enable WhatsApp ordering, replace 97798XXXXXXXX in index.html with your business WhatsApp number.");return;}window.open("https://wa.me/"+phone+"?text="+encodeURIComponent(msg),"_blank");}
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
+</body></html>
