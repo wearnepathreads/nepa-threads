@@ -50,5 +50,12 @@ document.getElementById("products").innerHTML=products.map((p,i)=>`<article clas
 function addToBag(i){bag.push(products[i]);document.getElementById("count").textContent=bag.length;alert(products[i].name+" added to your bag.");}
 function showCart(){if(!bag.length){alert("Your bag is empty. Add a product first.");return;}let lines=bag.map(p=>p.name+" — "+fmt(p.price));let total=bag.reduce((s,p)=>s+p.price,0);let msg="Namaste NEPA THREADS! I'd like to order:\\n"+lines.join("\\n")+"\\nTotal: "+fmt(total)+"\\nPlease confirm sizes and availability.";let phone="9779747507900";if(phone.includes("X")){alert("Your bag:\\n"+lines.join("\\n")+"\\nTotal: "+fmt(total)+"\\n\\nTo enable WhatsApp ordering, replace 97798XXXXXXXX in index.html with your business WhatsApp number.");return;}window.open("https://wa.me/"+phone+"?text="+encodeURIComponent(msg),"_blank");}
 document.getElementById("year").textContent=new Date().getFullYear();
-</script>
+</script><div style="text-align:center; padding:25px;">
+  <h2>Follow NEPA THREADS</h2>
+  <a href="https://www.instagram.com/wearnepathreads/" target="_blank">Instagram</a>
+  &nbsp; | &nbsp;
+  <a href="https://www.facebook.com/wearnepathreads" target="_blank">Facebook</a>
+  &nbsp; | &nbsp;
+  <a href="mailto:wearnepathreads@gmail.com">Email Us</a>
+</div>
 </body></html>
